@@ -51,7 +51,9 @@ class JpaPacticeApplicationTests {
 //		System.out.println(entities);
 
 		List<ProductEntity> entities =productRepository.findByTitleLike("%Choco%");
-		System.out.println(entities);
+
+		List<ProductEntity> entities1 =productRepository.findByTitleContainingIgnoreCase("%Choco%",null);
+		System.out.println(entities1);
 
 	}
 
